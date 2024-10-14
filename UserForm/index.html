@@ -23,6 +23,8 @@
     }
     .cross{
         color: red;
+        background-color: transparent;
+        border: none;
     }
     .Child{
         font-size: large;
@@ -34,14 +36,28 @@
         padding: 5px;
         width: 100px;
         border-radius: 10px;
-        color: white;
     }
     .delBtn ,.editBtn, .submitform{
         padding: 6px;
         border-radius: 10px;
         width: 100px;
         font-size: large;
+        font-weight: bold;
         /* color: white; */
+    }
+    .delBtn{
+        color: red;
+    }
+    .editBtn{
+        color: green;
+    }
+    .clear{
+        margin-left: 10%;
+        margin-top: 10px;
+        width: 150px;
+        font-size: large;
+        padding: 5px;
+        border-radius: 10px;
     }
     .userDetails{
         width: 40%;
@@ -64,7 +80,7 @@
             <input type="number" id="age" placeholder="Age" required><br><br>
             <input type="email" id="email" name="email" placeholder="Name" required><br><br>
             <input type="text" id="hobbies" placeholder="Add hobby"><br>
-            <button class="addhobbybtn" style="background-color: brown;">Add hobbby</button><br>
+            <button class="addhobbybtn">Add hobbby</button><br>
             <!-- <button class="addhobbybtn" style="background-color: brown;">Add hobbby</button> <br><br> -->
             <div class="hobbies">
                 <p id="hobbies-list"></p>
@@ -91,6 +107,9 @@
             </tr>
         </tbody>
     </table>
+    </div>
+    <div>
+        <button onclick="clearUsers()" class="clear">Clear Users</button>
     </div>
     <script src="index.js"></script>
 </body>

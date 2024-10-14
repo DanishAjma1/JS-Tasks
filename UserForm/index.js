@@ -19,8 +19,8 @@ let hobbies = [];
                 <td>${user.email}</td>
                 <td>${user.hobbies.join(', ')}</td>
                 <td>
-                    <button class="delBtn" style= "background-color: red;" onclick="deleteUser(${index})">Delete</button>
-                    <button class="editBtn" style= "background-color: green;" onclick="editUser(${index})">Edit</button>
+                    <button class="delBtn" onclick="deleteUser(${index})">Delete</button>
+                    <button class="editBtn" onclick="editUser(${index})">Edit</button>
                 </td>
                 `;
                 tableBody.appendChild(row);
@@ -112,4 +112,10 @@ let hobbies = [];
         updateHobbiesDisplay();
         submitBtn.value = "Edit";
         indexValue = index;
+    }
+
+    // eslint-disable-next-line no-unused-vars
+    function clearUsers(){
+        users = [];
+        UpdateDisplay();
     }
