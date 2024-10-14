@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        margin-top: 50px;
+        text-align: center;
+        width: 80%;
+        margin-left: 10%;
+    }
+    td,tr,th,table{
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+        font-size: large;
+    }
+    span{
+        margin-left: 10px;
+    }
+    .cross{
+        color: red;
+    }
+    .Child{
+        font-size: large;
+        
+    }
+    .addhobbybtn{
+        margin-top: 5px;
+        margin-left: 40%;
+        padding: 5px;
+        width: 100px;
+        border-radius: 10px;
+        color: white;
+    }
+    .delBtn ,.editBtn, .submitform{
+        padding: 6px;
+        border-radius: 10px;
+        width: 100px;
+        font-size: large;
+        /* color: white; */
+    }
+    .userDetails{
+        width: 40%;
+        text-align: center;
+    }
+    input{
+        width: 2.5in;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    label{
+        font-size: large;
+    }
+</style>
+<body>
+    <div class="userDetails">
+        <h1>User profile</h1>
+        <form>
+            <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+            <input type="number" id="age" placeholder="Age" required><br><br>
+            <input type="email" id="email" name="email" placeholder="Name" required><br><br>
+            <input type="text" id="hobbies" placeholder="Add hobby"><br>
+            <button class="addhobbybtn" style="background-color: brown;">Add hobbby</button><br>
+            <!-- <button class="addhobbybtn" style="background-color: brown;">Add hobbby</button> <br><br> -->
+            <div class="hobbies">
+                <p id="hobbies-list"></p>
+            </div>
+            <input type="submit" style= "background-color: yellow;" class="submitform">
+        </form>
+    </div>
+    <div class="data">
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Hobbies</th>
+            <th>Actions</th>
+        </thead>
+        <tbody class="table-body">
+            <tr>
+                <td>Default Name..</td>
+                <td>..</td>
+                <td>...@gmail.com</td>
+                <td>Hobbies..</td>
+                <td>Any Actions..</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
