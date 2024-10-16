@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    table {
+        margin-top: 50px;
+        text-align: center;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    td,tr,th,table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+        font-size: large;
+    }
+     .items-details{
+        width: 40%;
+        text-align: center;
+    }
+    input{
+        width: 2.5in;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    button{
+        padding: 6px;
+        border-radius: 10px;
+        width: 100px;
+        font-size: large;
+        font-weight: bold;
+    }
+    .total{
+        margin-left: 10%;
+    }
+</style>
+<body>
+    <div class="items-details">
+        <h2>Items Cart</h2>
+    <form>  
+        <input type="text" id="name" placeholder="Name" required><br><br>
+        <input type="number" id="quantity" placeholder="Quantity" required><br><br>
+        <input type="number" id="price" placeholder="Price" required><br><br>
+        <button onclick="ItemsHandler(event)">Submit</button>
+    </form>
+    </div>
+    <table>
+        <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        </tr>
+        <tbody class="table-body">
+        </tbody>
+    </table>
+    <div class="total">
+        <h3>Total Price..: <span id="price-tag">hello</span> Rs.</h3>
+    </div>
+    <script src=./Cart.js></script>
+</body>
+</html>

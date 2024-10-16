@@ -82,13 +82,11 @@ let hobbies = [];
             hobbiesList.innerHTML += `<text class= "Child" >${hobby}<span><button class= "cross" onclick= crossHobby(${index})>X</button></span>${index < hobbies.length - 1 ? ',' : ''}</text>`)
     }
 
-    // eslint-disable-next-line no-unused-vars
     function crossHobby(index)
     {
         hobbies.splice(index,1);
         updateHobbiesDisplay();
     }
-    // eslint-disable-next-line no-unused-vars
     function deleteUser(index)
     {
         users.splice(index,1);
@@ -101,7 +99,6 @@ let hobbies = [];
         UpdateDisplay();
     }
 
-    // eslint-disable-next-line no-unused-vars
     function editUser(index)
     {
         let user=users[index];
@@ -114,7 +111,6 @@ let hobbies = [];
         indexValue = index;
     }
 
-    // eslint-disable-next-line no-unused-vars
     function clearUsers(){
         users = [];
         UpdateDisplay();
