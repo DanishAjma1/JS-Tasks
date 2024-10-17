@@ -37,7 +37,21 @@
         font-weight: bold;
     }
     .total{
-        margin-left: 10%;
+        margin-left: 75%;
+    }
+    .delBtn ,.editBtn, .submitform{
+        padding: 6px;
+        border-radius: 10px;
+        width: 100px;
+        font-size: large;
+        font-weight: bold;
+        /* color: white; */
+    }
+    .delBtn{
+        color: red;
+    }
+    .editBtn{
+        color: green;
     }
 </style>
 <body>
@@ -47,7 +61,7 @@
         <input type="text" id="name" placeholder="Name" required><br><br>
         <input type="number" id="quantity" placeholder="Quantity" required><br><br>
         <input type="number" id="price" placeholder="Price" required><br><br>
-        <button onclick="ItemsHandler(event)">Submit</button>
+        <input type="submit" onclick="ItemsHandler(event)" class="submitform">
     </form>
     </div>
     <table>
@@ -55,6 +69,8 @@
         <th>Name</th>
         <th>Quantity</th>
         <th>Price</th>
+        <th>Prices for each Product</th>
+        <th>Actions</th>
         </tr>
         <tbody class="table-body">
         </tbody>
