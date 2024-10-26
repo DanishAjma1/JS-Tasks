@@ -47,11 +47,24 @@ function UpdateDisplay(){
                 <button class="editBtn" onclick="editUser(${index})">Edit</button>
             </td>
         `;
-        sum+= item.quantity * item.price;   
+        // sum+= item.quantity * item.price;
         tbody.appendChild(row);
         }
     });
+    sum =itemsList.reduce((prev,item) => prev + item.price * item.quantity,0);
+    let quantity =itemsList.reduce((prev,item) => prev + item.quantity,0);
+
     document.getElementById("price-tag").innerHTML = sum;
+    document.getElementById("quantity-tag").innerHTML = quantity;
+
+    let Ulist = document.createElement('ul');
+    Ulist.innerHTML = "";
+
+    itemsList.map(item => {
+        let li = document.createElement('li');
+        li.textContent = item.name;
+        Ulist.appendChild(li);
+    });
 }
     function deleteUser(index)
     {
@@ -74,3 +87,5 @@ function UpdateDisplay(){
         submitBtn.value = "Edit";
         indexValue = index;
     }
+
+    
